@@ -2,37 +2,31 @@
 
 import { motion } from 'framer-motion'
 
-interface Benefit {
-  icon: string
-  title: string
-  description: string
-}
-
-const benefits: Benefit[] = [
+const benefits = [
   {
-    icon: '🌍',
-    title: 'Importación Directa',
-    description: 'Trabajamos directamente con fabricantes, eliminando intermediarios.',
+    icon: '🏭',
+    title: 'Directo de Fábrica',
+    description: 'Trabajamos directo con fabricantes, sin intermediarios, para ofrecerte el mejor precio y calidad.',
   },
   {
     icon: '✓',
     title: 'Calidad Garantizada',
-    description: 'Productos seleccionados con estándares internacionales de calidad.',
+    description: 'Productos seleccionados con estándares internacionales. Material bronce, acero inoxidable y loza de primera.',
   },
   {
-    icon: '🛡️',
-    title: 'Garantía en Todos los Productos',
-    description: 'Ofrecemos garantía completa en todos nuestros productos, respaldando la calidad y durabilidad de cada artículo.',
+    icon: '🎨',
+    title: 'Diseño Contemporáneo',
+    description: 'Estética moderna y adaptable a distintos estilos de proyecto. Cromo pulido, satinado y acabados premium.',
   },
   {
-    icon: '✨',
-    title: 'Diseño Moderno',
-    description: 'Líneas contemporáneas y acabados premium para espacios únicos.',
+    icon: '📦',
+    title: 'Amplio Catálogo',
+    description: 'Griferías, sanitarios, espejos LED, bañeras exentas, cabinas de ducha, vanitorys y accesorios.',
   },
   {
     icon: '💬',
     title: 'Atención Personalizada',
-    description: 'Asesoramiento especializado para cada proyecto y necesidad.',
+    description: 'Asesoramiento especializado para cada proyecto. Consultanos por WhatsApp o email.',
   },
 ]
 
@@ -51,7 +45,7 @@ export default function Benefits() {
             ¿Por qué elegir MQ?
           </h2>
           <p className="text-xl text-mq-gray max-w-2xl mx-auto font-light">
-            Ventajas que nos distinguen en el mercado.
+            Una marca sólida enfocada en productos confiables y bien desarrollados.
           </p>
         </motion.div>
 
@@ -66,13 +60,13 @@ export default function Benefits() {
               whileHover={{ y: -5 }}
               className="text-center"
             >
-              <div className="w-20 h-20 mx-auto mb-6 bg-mq-light-gray rounded-2xl flex items-center justify-center text-4xl group-hover:bg-mq-accent-soft/20 transition-all duration-300">
+              <div className="w-20 h-20 mx-auto mb-6 bg-mq-light-gray rounded-2xl flex items-center justify-center text-4xl transition-all duration-300">
                 {benefit.icon}
               </div>
               <h3 className="text-xl font-semibold text-mq-black mb-3">
                 {benefit.title}
               </h3>
-              <p className="text-mq-gray font-light leading-relaxed">
+              <p className="text-mq-gray font-light leading-relaxed text-sm">
                 {benefit.description}
               </p>
             </motion.div>
@@ -82,5 +76,3 @@ export default function Benefits() {
     </section>
   )
 }
-
-

@@ -28,15 +28,21 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white rounded-2xl p-8 md:p-12 shadow-sm"
+            className="bg-white rounded-2xl p-8 md:p-12 shadow-sm space-y-6"
           >
             <p className="text-lg md:text-xl text-mq-gray leading-relaxed font-light text-center">
-              MQ es una empresa dedicada a la{' '}
-              <span className="font-semibold text-mq-black">importación directa</span>, ofreciendo productos seleccionados con{' '}
-              <span className="font-semibold text-mq-black">estándares internacionales de calidad</span>.
+              MQ es una marca especializada en{' '}
+              <span className="font-semibold text-mq-black">griferías, sanitarios y equipamiento de baño</span>{' '}
+              que combina diseño contemporáneo, funcionalidad y estándares de calidad confiables.
             </p>
-            <p className="text-lg md:text-xl text-mq-gray leading-relaxed font-light text-center mt-6">
-              Nos especializamos en grifería y sanitarios metálicos, trabajando directamente con fabricantes para garantizar excelencia en cada producto.
+            <p className="text-lg md:text-xl text-mq-gray leading-relaxed font-light text-center">
+              Nuestra propuesta está orientada a ofrecer{' '}
+              <span className="font-semibold text-mq-black">soluciones duraderas</span>,
+              con una estética moderna y adaptable a distintos estilos de proyecto.
+            </p>
+            <p className="text-lg md:text-xl text-mq-gray leading-relaxed font-light text-center">
+              Integramos <span className="font-semibold text-mq-black">diseño, calidad y eficiencia</span> en cada línea.
+              MQ se proyecta como una marca sólida, enfocada en ofrecer productos confiables y bien desarrollados.
             </p>
           </motion.div>
         </div>
@@ -44,5 +50,3 @@ export default function About() {
     </section>
   )
 }
-
-

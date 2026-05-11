@@ -2,13 +2,14 @@
 
 import { motion } from 'framer-motion'
 
+const categories = ['Griferías', 'Sanitarios', 'Espejos', 'Bañeras', 'Vanitorys', 'Accesorios']
+
 export default function Hero() {
   return (
     <section
       id="inicio"
       className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-mq-light-gray to-white overflow-hidden"
     >
-      {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 right-20 w-96 h-96 bg-mq-accent-soft/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-mq-accent-soft/10 rounded-full blur-3xl"></div>
@@ -26,24 +27,42 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-mq-black mb-6 leading-tight"
           >
-            Importadores Directos
+            Diseño, Calidad
             <br />
-            <span className="text-mq-accent">de Calidad</span>
+            <span className="text-mq-accent">y Eficiencia</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-xl md:text-2xl text-mq-gray mb-12 max-w-3xl mx-auto font-light"
+            className="text-xl md:text-2xl text-mq-gray mb-6 max-w-3xl mx-auto font-light"
           >
-            Soluciones premium seleccionadas directamente de fábrica.
+            Griferías, sanitarios y equipamiento de baño con estética moderna y estándares de calidad confiables.
           </motion.p>
+
+          {/* Category pills */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.75 }}
+            className="flex flex-wrap justify-center gap-2 mb-12"
+          >
+            {categories.map((cat, i) => (
+              <span
+                key={i}
+                className="text-sm font-medium text-mq-gray bg-white border border-gray-200 rounded-full px-4 py-1.5 shadow-sm"
+              >
+                {cat}
+              </span>
+            ))}
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <motion.a
               href="#productos"
@@ -51,13 +70,22 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="inline-block bg-mq-black text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-mq-dark transition-all duration-300 shadow-lg"
             >
-              Ver productos
+              Ver catálogo
+            </motion.a>
+            <motion.a
+              href="https://wa.me/5492236235505"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block bg-white text-mq-black border border-gray-200 px-10 py-4 rounded-full text-lg font-medium hover:border-gray-400 transition-all duration-300 shadow-sm"
+            >
+              Cotizar ahora
             </motion.a>
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -79,5 +107,3 @@ export default function Hero() {
     </section>
   )
 }
-
-
